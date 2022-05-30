@@ -202,9 +202,9 @@ else {
   if (!empty($_COOKIE[session_name()]) &&
       session_start() && !empty($_SESSION['login'])) {
     
-    $user = 'u35789';
-    $pass = '3458575';
-    $db = new PDO('mysql:host=localhost;dbname=u35789', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+    $user = 'u41819';
+    $pass = '5909620';
+    $db = new PDO('mysql:host=localhost;dbname=u41819', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
     $stmt1 = $db->prepare('UPDATE forms SET name=?, email=?, birthday=?, sex=?, limbs=?, bio=? WHERE form_id = ?');
     $stmt1->execute([$values['name'], $values['email'], $values['birthday'], $values['gender'], $values['limbs'], $values['biography'], $_SESSION['uid']]);
 
@@ -227,9 +227,9 @@ else {
     setcookie('login', $login);
     setcookie('pass', $pass);
 
-    $user = 'u35789';
-    $pass_db = '3458575';
-    $db = new PDO('mysql:host=localhost;dbname=u35789', $user, $pass_db, array(PDO::ATTR_PERSISTENT => true));
+    $user = 'u41819';
+    $pass_db = '5909620';
+    $db = new PDO('mysql:host=localhost;dbname=u41819', $user, $pass_db, array(PDO::ATTR_PERSISTENT => true));
     $stmt1 = $db->prepare("INSERT INTO forms SET name = ?, email = ?, birthday = ?, 
       sex = ? , limbs = ?, bio = ?, login = ?, pass_hash = ?");
     $stmt1 -> execute([$trimmedPost['name'], $trimmedPost['email'], $trimmedPost['birthday'], 
